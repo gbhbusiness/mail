@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Copyright (c) 2020-Present Webkul Software Pvt. Ltd. (<https://webkul.com/>) -->
+    <!-- See LICENSE file for full copyright and licensing details. -->
+   <data noupdate="0">
+        <template id="redsys_merchant_form">
+            <div>
+                <input type="hidden" name="data_set" t-att-data-action-url="tx_url" data-remove-me=""/>
+                <input type="hidden" name="Ds_SignatureVersion" t-att-value="Ds_SignatureVersion"/>
+                <input type="hidden" name="Ds_MerchantParameters" t-att-value="Ds_MerchantParameters"/>
+                <input type="hidden" name="Ds_Signature" t-att-value="Ds_Signature"/>
+            </div>
+        </template>
+    </data>
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data noupdate="1">
+        <record id="redsys_journal" model="account.journal">
+            <field name="name">Redsys</field>
+            <field name="type">bank</field>
+            <field name="code">PM_B</field>
+        </record>
+        <record id="payment_acquirer_redsys" model="payment.acquirer">
+            <field name="name">Redsys Merchant</field>
+            <field name="provider">redsys</field>
+            <field name="state">test</field>
+            <field name="company_id" ref="base.main_company"/>
+            <field name="description"><![CDATA[
+                <p>A Redsys payment gateway to accept online payments.</p>]]></field>
+            <field name="view_template_id" ref="payment_redsys_merchant.redsys_merchant_form"/>
+            <field name="image_128" type="base64" file="payment_redsys_merchant/static/src/img/Redsys-payment-gateway.jpg"/>
+            <field name="journal_id" ref="payment_redsys_merchant.redsys_journal"/>
+            <field name="pre_msg"><![CDATA[
+<p>You will be connected with <b> [REDSYS]</b>.</p>]]>
+            </field>
+            <field name="redsys_merchant_code">999008881</field>
+            <field name="redsys_merchant_key">sq7HjrUOBfKmC576ILgskD5srU870gJ7</field>
+            <field name="redsys_merchant_terminal">001</field>
+            <field name="state">test</field>
+        </record>
+    </data>
+</odoo>
